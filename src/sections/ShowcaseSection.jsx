@@ -56,7 +56,7 @@ const ShowcaseSection = () => {
                             <div className="image-wrapper bg-[#ffefdb]">
                                 <img src="/images/quizlytics.png" alt="Quizlytics" />
                             </div>
-                            <h2>Quizlytics — Quizz & Learning Analytics Platform</h2>
+                            <h2>Quizlytics — Quiz & Learning Analytics Platform</h2>
                         </div>
 
                         <div className="project" ref={project3Ref}>
