@@ -288,6 +288,73 @@ const socialImgs = [
     },
 ];
 
+/**
+ * Project data for the showcase section
+ * @typedef {Object} Project
+ * @property {number} id - Unique identifier for the project
+ * @property {string} title - Project title
+ * @property {string} description - Project description
+ * @property {string} imgPath - Path to the project image
+ * @property {string} bgColor - Background color for the project card (optional)
+ * @property {boolean} featured - Whether this is a featured project (displayed prominently)
+ * @property {string} projectUrl - URL to the project (optional)
+ * @property {string[]} technologies - Array of technologies used in the project
+ */
+
+/**
+ * Projects to showcase in the portfolio
+ * @type {Project[]}
+ */
+const showcaseProjects = [
+    {
+        id: 1,
+        title: "Proway — an AI-assisted career guidance and planning platform",
+        description: "A platform built with NestJS (Microservices), React (Vite), and TailwindCSS for a fast, user-friendly experience. It leverages Docker for containerization, RabbitMQ for inter-service communication, and Azure OpenAI for intelligent, AI-powered interactions.",
+        imgPath: "/images/Proway1.png",
+        bgColor: "",
+        featured: true,
+        projectUrl: "#",
+        technologies: ["React", "NestJS", "TailwindCSS", "Docker", "RabbitMQ", "Azure OpenAI"]
+    },
+    {
+        id: 2,
+        title: "Quizlytics — Quiz & Learning Analytics Platform",
+        description: "An interactive quiz platform with advanced analytics to track learning progress and identify knowledge gaps.",
+        imgPath: "/images/quiz.png",
+        bgColor: "#ffefdb",
+        featured: false,
+        projectUrl: "#",
+        technologies: ["Spring Boot", "Angular", "PostgreSQL", "Chart.js"]
+    },
+    {
+        id: 3,
+        title: "SportCoachApp — Personalized Gym Coaching Powered by AI",
+        description: "A mobile application that provides personalized workout plans and real-time form correction using AI technology.",
+        imgPath: "/images/sportCaoch.jpg",
+        bgColor: "#ffe7db",
+        featured: false,
+        projectUrl: "#",
+        technologies: ["React Native", "Gemini API", "Firebase", "Express JS", "NativeWind"]
+    }
+];
+
+/**
+ * Add a new project to the showcase
+ * @param {Project} project - The project to add
+ * @returns {Project[]} - The updated projects array
+ */
+const addProject = (project) => {
+    // Generate a new ID if not provided
+    if (!project.id) {
+        const maxId = Math.max(...showcaseProjects.map(p => p.id), 0);
+        project.id = maxId + 1;
+    }
+    
+    // Add the project to the array
+    showcaseProjects.push(project);
+    return showcaseProjects;
+};
+
 export {
     words,
     abilities,
@@ -300,4 +367,6 @@ export {
     techStackIcons,
     techStackImgs,
     navLinks,
+    showcaseProjects,
+    addProject,
 };

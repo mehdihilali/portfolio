@@ -234,10 +234,10 @@ section {
         }
 
         .project-list-wrapper {
-            @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
+            @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2 gap-10 xl:w-[40%];
 
             .image-wrapper {
-                @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
+                @apply h-52 md:h-40 lg:h-52 relative rounded-xl xl:px-5 2xl:px-12 py-0;
             }
 
             img {
