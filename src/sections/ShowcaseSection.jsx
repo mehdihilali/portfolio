@@ -54,7 +54,7 @@ const ShowcaseSection = () => {
                     <div className="project-list-wrapper overflow-hidden">
                         <div className="project" ref={project2Ref}>
                             <div className="image-wrapper bg-[#ffefdb]">
-                                <img src="/images/quizlytics.png" alt="Quizlytics" />
+                                <img src="/images/quiz.png" alt="Quizlytics" />
                             </div>
                             <h2>Quizlytics — Quiz & Learning Analytics Platform</h2>
                         </div>
